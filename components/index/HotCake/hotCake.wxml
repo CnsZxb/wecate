@@ -1,0 +1,77 @@
+<view class="top_title">
+  <text class="title">一折爆款</text>
+  <view class="right_more">
+    <navigator url="../../pages/kind/kind" open-type="switchTab"  hover-class="none" data-id="2" bindtap="kind">全部
+    <image src="../../../images/index/more.png"></image>
+    </navigator>
+  </view>
+</view>
+<view class="hot_list">
+  <view class="list_info" wx:for="{{goldGoods}}" wx:for-item="goods" wx:key="index">
+    <navigator url="../../pages/goods/goods?id={{goods.id}}&zhuang=fei" hover-class="none">
+    <view class="img_box">
+      <image src="{{goods.pic[0]}}"></image>
+    </view>
+    <view class="goods_title">{{goods.title}}</view>
+    <view class="old">¥{{goods.oldprice}}</view>
+    <view class="price">¥{{goods.price}}</view>
+    <view class="hot_one"></view>
+    </navigator>
+  </view>
+</view>
+<view class="goods">
+  <view class="goodstitle">
+  </view>
+  <view class="shade1">
+    <view class="shade_title">在售商品</view>
+    <text class="describe">精选好物，包邮直达</text>
+  </view>
+</view>
+<view class="huangjin">
+  <view class="huangjin_list" wx:for="{{goodsList}}" wx:for-item="list" wx:key="index">
+  <navigator url="../../pages/goods/goods?id={{list.id}}&zhuang=fei" hover-class="none">
+    <view class="img_box2">
+      <image src="{{list.pic[0]}}"></image>
+    </view>
+    <view class="goods_title">{{list.title}}</view>
+    <view class="price">¥{{list.price}}</view>
+    <view class="now_buy">立即购买</view>
+    </navigator>
+  </view>
+  <view class="btn_1">
+    <navigator class="any_more" url="../../pages/kind/kind" open-type="switchTab" data-id="0" bindtap="kind" hover-class="none">
+      查看全部在售商品>
+    </navigator>
+  </view>
+</view>
+<view class="goods yushou">
+  <view class="goodstitle">
+  </view>
+  <view class="shade2">
+    <view class="shade_title">预售商品</view>
+    <text class="describe">预购黄金，多买多赚</text>
+  </view>
+</view>
+<view class="huangjin">
+  <view class="presale_item2" wx:for="{{goodsYu}}" wx:for-item="list" wx:key="index">
+   <navigator url="../../pages/goods/goods?id={{list.id}}&zhuang=li"  hover-class="none">
+    <view class="img_box3">
+      <image src="{{list.pic[0]}}"></image>
+    </view>
+    <view class="item_list">
+      <view class="item_title">{{list.title}}</view>
+      <text class="item_time">定制期{{list.zhouqi}}天</text>
+      <view class="item_qian">预售价：
+        <text class="price">¥{{list.price}}</text> </view>
+      <view class="item_man" wx:if="{{list.xiaoshu}}">满减：
+        <text class="price">每满{{list.dashu}}元减{{list.xiaoshu}}元</text>
+      </view>
+    </view>
+  </navigator>
+  </view>
+    <view class="btn_1">
+    <navigator   class="any_more" bindtap="kind" url="../../pages/kind/kind" open-type="switchTab" data-id="1" hover-class="none">
+      查看全部预售商品>
+    </navigator  >
+  </view>
+</view>

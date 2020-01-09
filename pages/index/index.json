@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "GoldPrice":"../components/index/GoldPrice/GoldPrice",
+    "HotCake":"../components/index/HotCake/hotCake",
+    "Footer":"../components/index/Footer/Footer",
+    "Loading":"../components/common/Loading/Loading"
+  }
+}

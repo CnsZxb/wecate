@@ -1,0 +1,109 @@
+<!--pages/my/my.wxml-->
+<view class="header">
+  <view class="top_box">
+    <image src="../../images/public/set.png" class="edit"></image>
+  </view>
+  <view class="head">
+    <image src="../../images/public/logo.png"></image>
+  </view>
+  <view style="float: left;margin-left: 0.8em;">
+    <view class="uinfo">
+      <view class="name">张笑保</view>
+      <view class="phone">134****6004</view>
+      <view class="telphone"></view>
+    </view>
+  </view>
+  <view class="account">
+    <view class="acc_box">
+      <view class="acc_left">
+        <view class="acc_img">
+          <image src="../../images/public/6.png"></image>
+        </view>
+        账户余额：
+        <text class="money">¥81840.14</text>
+      </view>
+      <view class="tu_pic">
+        <image src="../../images/public/right_more.png" style="width: 0.275rem;height: 0.5rem;"></image>
+      </view>
+    </view>
+  </view>
+  <view class="mineorder">
+    <view class="row_t">
+      <image class="row_ico" src="../../images/public/t_ico.png"></image>我的订单</view>
+    <view class="listitem">
+      <view class="li">
+        <image src="../../images/public/daifu.png"></image>
+        <view class="wen">代付款</view>
+      </view>
+      <view class="li">
+        <image src="../../images/public/yifu.png"></image>
+        <view class="wen">持有中</view>
+      </view>
+      <view class="li">
+        <image src="../../images/public/daiqu.png"></image>
+        <view class="wen">已到期</view>
+      </view>
+      <view class="li">
+        <image src="../../images/public/daimai2.png"></image>
+        <view class="wen">待收货</view>
+      </view>
+      <view class="li">
+        <image src="../../images/public/lishi.png"></image>
+        <view class="wen">已完成</view>
+      </view>
+    </view>
+  </view>
+  <view class="substance">
+    <view class="item">
+      <view class="gushi">
+        <view class="tu">
+          <image src="../../images/public/youhui.png" style="width: 22px;height: 22px;"></image>
+        </view>
+        <view class="word">我的优惠券</view>
+        <view class="tu_pic">
+          <image src="../../images/public/right_ico.png" style="width: 0.275rem;height: 0.5rem;"></image>
+        </view>
+      </view>
+      <view class="gushi">
+        <view class="tu">
+          <image src="../../images/public/invite.png" style="width: 22px;height: 22px;"></image>
+        </view>
+        <view class="word">邀请</view>
+        <view class="tu_pic">
+          <image src="../../images/public/right_ico.png" style="width: 0.275rem;height: 0.5rem;"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="substance">
+    <view class="item">
+      <view class="gushi">
+        <view class="tu">
+          <image src="../../images/public/news.png" style="width: 22px;height: 22px;"></image>
+        </view>
+        <view class="word">消息</view>
+        <view class="tu_pic">
+          <image src="../../images/public/right_ico.png" style="width: 0.275rem;height: 0.5rem;"></image>
+        </view>
+      </view>
+      <view class="gushi">
+        <view class="tu">
+          <image src="../../images/public/went.png" style="width: 22px;height: 22px;"></image>
+        </view>
+        <view class="word">帮助中心</view>
+        <view class="tu_pic">
+          <image src="../../images/public/right_ico.png" style="width: 0.275rem;height: 0.5rem;"></image>
+        </view>
+      </view>
+      <view class="gushi">
+        <view class="tu">
+          <image src="../../images/public/download.png" style="width: 22px;height: 20px;"></image>
+        </view>
+        <view class="word">下载地址</view>
+        <view class="tu_pic">
+          <image src="../../images/public/right_ico.png" style="width: 0.275rem;height: 0.5rem;"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

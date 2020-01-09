@@ -1,0 +1,86 @@
+<!--pages/goods/goods.wxml-->
+<swiper indicator-dots="{{true}}" autoplay="{{true}}">
+  <block wx:for="{{imgUrls}}" wx:for-index="index" wx:for-item="img" wx:key="index">
+    <swiper-item>
+      <image src="{{img.thumb}}"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="groupone">
+  <view class="titleone">
+    <view class="row">{{goodsInfo.title}}</view>
+    <view class="original">
+      原价：
+      <text>¥{{goodsInfo.oldprice}}</text>
+    </view>
+    <view class="original_price">
+      <view class="current_price">现价：
+        <text class="red">¥</text>
+        <text class="num">{{goodsInfo.price}}</text>
+      </view>
+      <view class="state_box">
+        <text>邮费：{{goodsInfo.other_freight}}元</text>
+        <text>剩余： {{goodsInfo.stock}} 件</text>
+      </view>
+    </view>
+  </view>
+  <view class="title_p" bindtap="openDialog">
+    <view class="left">选择规格数量</view>
+    <view>
+      <text>已选：</text>
+      <text id="choosespec">{{spec[0].specName}}</text> x
+      <text id="choosenum">1</text>
+      <image src="../../images/icon/arrow.png" class="chooseimg"></image>
+    </view>
+  </view>
+</view>
+<view class="page__bd">
+  <view class="weui-demo-dialog {{istrue ? 'weui-demo-dialog_show' : ''}}">
+    <view class="weui-mask" bindtap="closeDialog"></view>
+    <view class="weui-half-screen-dialog">
+      <view bindtap="closeDialog" class="weui-icon-btn weui-icon-btn_close">关闭</view>
+      <view class="guige_img">
+        <image src="{{imgUrls[0].thumb}}"></image>
+        <view class="guige_font">
+          <view class="price">¥{{goodsInfo.price}}元</view>
+          <view>剩余：{{goodsInfo.stock}}件</view>
+        </view>
+      </view>
+      <view class="sel_font">
+        <text>请选择规格</text>
+        <view class="xian"></view>
+      </view>
+      <text class="li_choose">{{spec[0].specName}}</text>
+       <view class="xian" style="margin-left:0.75rem"></view>
+       <view class="num2">
+        <view class="num_left">
+        购买数量<text style="color:#D5AC67" hidden="{{goodsInfo.type != 2 && goodsInfo.type != 1}}">(限购1件)</text>
+        </view>
+        <view class="num_right">
+        <Stepper></Stepper>
+        </view>
+       </view>
+       <view  class="adshop"  bindtap="closeDialog">
+        确定
+       </view>
+    </view>
+  </view>
+</view>
+<view class="discription">
+  <view class="selected">
+    <text>产品详情</text>
+  </view>
+  <view class="detail_box">
+    <import src="../../wxParse/wxParse.wxml" />
+    <template is="wxParse" data="{{wxParseData:newDetailsNodes.nodes}}" />
+  </view>
+</view>
+<view class="footer">
+  <view class="left_btn" bindtap="home">
+    <image src="../../images/public/shop1_x.png"></image>
+    <text>商城</text>
+  </view>
+  <view class="right_btn">
+    立即选购
+  </view>
+</view>

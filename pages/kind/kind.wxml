@@ -1,0 +1,88 @@
+<view class="discription">
+  <view class="disBtn">
+    <text wx:for="{{btns}}" wx:for-item="list" wx:key="index" class="{{index==active?'startStyle':''}}" bindtap="toggle" data-index="{{index}}">{{list}}</text>
+  </view>
+</view>
+<view class="onSell" hidden="{{active!=0}}">
+  <view class="goods">
+    <view class="goodstitle">
+    </view>
+    <view class="shade1">
+      <view class="shade_title">在售商品</view>
+      <text class="describe">精选好物，包邮直达</text>
+    </view>
+  </view>
+  <view class="huangjin">
+    <view class="huangjin_list" wx:for="{{goodsList}}" wx:for-item="list" wx:key="index">
+      <navigator url="../../pages/goods/goods?id={{list.id}}&zhuang=fei"  hover-class="none">
+      <view class="img_box2">
+        <image src="{{list.pic[0]}}"></image>
+      </view>
+      <view class="goods_title">{{list.title}}</view>
+      <view class="price">¥{{list.price}}</view>
+      <view class="now_buy">立即购买</view>
+      </navigator>
+    </view>
+  </view>
+</view>
+<view class="preSell" hidden="{{active!=1}}">
+  <view class="goods">
+    <view class="goodstitle">
+    </view>
+    <view class="shade2">
+      <view class="shade_title">预售商品</view>
+      <text class="describe">预购黄金，多买多赚</text>
+    </view>
+  </view>
+  <view class="huangjin">
+    <view class="presale_item2" wx:for="{{goodsYu}}" wx:for-item="list" wx:key="index">
+      <navigator url="../../pages/goods/goods?id={{list.id}}&zhuang=li"  hover-class="none">
+      <view class="img_box3">
+        <image src="{{list.pic[0]}}"></image>
+      </view>
+      <view class="item_list">
+        <view class="item_title">{{list.title}}</view>
+        <text class="item_time">定制期{{list.zhouqi}}天</text>
+        <view class="item_qian">预售价：
+          <text class="price">¥{{list.price}}</text> </view>
+        <view class="item_man" wx:if="{{list.xiaoshu}}">满减：
+          <text class="price">每满{{list.dashu}}元减{{list.xiaoshu}}元</text>
+        </view>
+      </view>
+  </navigator>
+    </view>
+  </view>
+</view>
+<view class="hotSell" hidden="{{active!=2}}">
+  <view class="goods">
+    <view class="goodstitle">
+    </view>
+    <view class="shade3">
+      <view class="shade_title">爆款商品</view>
+      <text class="describe">精选好物，包邮直达</text>
+    </view>
+  </view>
+  <view class="hot_buy">
+    <view class="buy_list" wx:for="{{htgoodslist}}" wx:for-item="list" wx:key="index">
+      <navigator url="../../pages/goods/goods?id={{list.id}}&zhuang=fei"  hover-class="none">
+      <view class="img_box">
+        <image src="{{list.pic[0]}}"></image>
+        <view class="hot_one"></view>
+      </view>
+      <view class="buy_details">
+        <view class="buy_name">{{list.title}}</view>
+        <view class="buy_bao" wx:if="{{list.type==2}}">付邮费免费送</view>
+        <view class="buy_bao" wx:if="{{list.type==1}}">一折包邮</view>
+        <view class="buy_old">原价：
+          <text class="del">¥{{list.oldprice}}</text>
+        </view>
+        <view class="buy_qiang">抢购价：
+          <text class="price">¥{{list.price}}</text>
+        </view>
+        <navigator url="../../pages/kind/kind" open-type="redirect" class="now_hot">马上抢
+        </navigator>
+      </view>
+     </navigator>
+    </view>
+  </view>
+</view>

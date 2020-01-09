@@ -1,0 +1,32 @@
+<!--components/index/Footer/Footer.wxml-->
+<view class="footer_title">
+  了解金宝缘
+</view>
+<view class="english">
+  ABOUT US
+</view>
+<view class="foote_tab">
+  <navigator url="../../pages/kind/kind" open-type="redirect" class="tab_box">
+    <image class="btn_img" src="../../../images/index/1.png"></image>
+    <text class="img_title">平台简介</text>
+    <view class="vertical"></view>
+  </navigator>
+    <navigator url="../../pages/kind/kind" open-type="redirect" class="tab_box">
+    <image class="btn_img" src="../../../images/index/2.png"></image>
+    <text class="img_title">安全保障</text>
+    <view class="vertical"></view>
+  </navigator>
+    <navigator url="../../pages/kind/kind" open-type="redirect" class="tab_box">
+    <image class="btn_img" src="../../../images/index/Shape2.png"></image>
+    <text class="img_title">合作伙伴</text>
+    <view class="vertical"></view>
+  </navigator>
+    <navigator url="../../pages/kind/kind" open-type="redirect" class="tab_box">
+    <image class="btn_img" src="../../../images/index/4.png"></image>
+    <text class="img_title">帮助中心</text>
+  </navigator>
+</view>
+<view class="telPhone">
+  <image src="../../../images/index/phone.png" class="tel"></image>
+  <text>客服电话：400-080-6089 </text>
+</view>

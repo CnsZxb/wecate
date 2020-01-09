@@ -1,0 +1,7 @@
+<!--components/common/Loading/Loading.wxml-->
+<view class="loading_box">
+<view class="box">
+  <image class="Loading" src="../../../images/icon/loading.gif"></image>
+  <view class="loading_text"> 加载中...</view>
+</view>
+</view>

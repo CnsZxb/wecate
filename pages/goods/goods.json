@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Stepper": "../../components/common/Stepper/Stepper"
+  },
+  "navigationBarTitleText": "商品详情"
+}

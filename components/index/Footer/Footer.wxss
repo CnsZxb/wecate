@@ -1,0 +1,84 @@
+/* components/index/Footer/Footer.wxss */
+
+.footer_title {
+  height: 2.5625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8125rem;
+}
+
+.footer_title::before {
+  content: "";
+  display: inline-block;
+  width: 2.25rem;
+  height: 1px;
+  background-color: #b9b9b9;
+  margin-right: 0.625rem;
+}
+
+.footer_title::after {
+  content: "";
+  display: inline-block;
+  width: 2.25rem;
+  height: 1px;
+  background-color: #b9b9b9;
+  margin-left: 0.625rem;
+}
+
+.english {
+  text-align: center;
+  color: #999;
+  height: 1rem;
+  font-size: 0.6875rem;
+  letter-spacing: 0.2rem;
+}
+
+.btn_img {
+  width: 1.625rem;
+  height: 1.625rem;
+}
+
+.tab_box {
+  float: left;
+  width: 25%;
+  text-align: center;
+  position: relative;
+}
+
+.foote_tab {
+  width: 95%;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+
+.img_title {
+  display: block;
+  color: #333;
+  font-size: 0.6875rem;
+}
+
+.vertical {
+  width: 1px;
+  height: 2.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #c2c2c2;
+}
+
+.telPhone {
+  font-size: 0.6875rem;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.tel {
+  width: 15px;
+  height: 15px;
+  margin-right: 0.1875rem;
+}

@@ -1,0 +1,28 @@
+  <view class="top_title">
+    <text class="title">黄金定制</text>
+  </view>
+  <view class="bgc_img">
+  </view>
+  <view class="gold_info">
+    <view class="gold_box">
+      <view class="info_item">
+        <view class="info_item2" wx:for="{{goldGoods}}" wx:for-index="index" wx:for-item="goods" wx:key="index">
+          <view class="item_img">
+            <image src="{{goods.picbig}}"></image>
+          </view>
+          <view class="item_describe">
+            <text class="describe_top">{{goods.title}}</text>
+            <text class="item_price">基础金价：{{price}}元/克</text>
+            <view class="item_btm">产品规格：
+              <text wx:for="{{goods.guige}}" wx:for-index="index" wx:for-item="guige" wx:key="index">{{guige}}克 </text> </view>
+          </view>
+        </view>
+        <text class="zhouqi">提货周期</text>
+        <view class="btn_box">
+          <text wx:for="{{zhouqi}}" wx:for-index="index" wx:for-item="zhouqi" wx:key="index" class="{{index == cur? 'click_btn': '' }}" data-index="{{index}}" bindtap="clickBtn" data-rate="{{zhouqi.fixed_income}}">{{zhouqi.period_num}}天</text>
+        </view>
+        <view class="describe_btm">{{rate}}固定收益</view>
+        <button class="now_buy" bindtap="nowBuy">立即买入</button>
+      </view>
+    </view>
+  </view>

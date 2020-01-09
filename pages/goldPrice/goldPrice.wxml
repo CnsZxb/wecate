@@ -1,0 +1,71 @@
+<view class="topHeader">
+  <view class="price_left">
+    <text class="gold_title">基础金价
+      </text>
+    <view class="price_box" bind:showTab="showTab">
+      {{price}}
+      <text class="unit">元/克</text>
+    </view>
+  </view>
+  <view class="price_left2">
+    <text class="gold_title">工费
+      </text>
+    <view class="price_box2">
+      {{gong}}
+      <text class="unit">元/克</text>
+    </view>
+  </view>
+</view>
+<view class="top_title">
+  <text class="title">黄金定制</text>
+</view>
+<view class="bgc_img">
+</view>
+<view class="gold_info">
+  <view class="gold_box">
+    <view class="info_item">
+      <view class="info_item2" wx:for="{{goldGoods}}" wx:for-index="index" wx:for-item="goods" wx:key="index">
+        <view class="item_img">
+          <image src="{{goods.picbig}}"></image>
+        </view>
+        <view class="item_describe">
+          <text class="describe_top">{{goods.title}}</text>
+          <text class="item_price">基础金价：{{price}}元/克</text>
+        </view>
+      </view>
+      <text class="zhouqi">提货周期</text>
+      <view class="btn_box">
+        <text wx:for="{{zhouqi}}" wx:for-index="index" wx:for-item="zhouqi" wx:key="index" class="{{index == cur? 'click_btn': '' }}" data-index="{{index}}" bindtap="clickBtn" data-rate="{{zhouqi.fixed_income}}" data-ke="{{zhouqi.minimum_gram}}" data-day="{{zhouqi.period_num}}">{{zhouqi.period_num}}天</text>
+      </view>
+      <text class="zhouqi">产品规格</text>
+      <view class="btn_box2">
+        <text wx:for="{{goldGoods[0].guige}}" wx:for-index="index" wx:for-item="guige" wx:key="index" class="{{index == tur? 'click_btn': '' }}" data-index="{{index}}" bindtap="clickBtn2" data-ke="{{goldGoods[0].guige[index]}}">{{guige}}克</text>
+      </view>
+      <view class="please_input">请输入购买克数</view>
+      <input placeholder="1份起售" value="{{fenshu}}" class="input_num" bindinput="getFen" type="number"></input>
+      <view class="buy_title">购买金额
+        <text class="red_font">{{total}}</text>元</view>
+      <view class="buy_title2">满送余额
+        <text class="red_font2">{{qian}}</text>元</view>
+      <view class="guige">购买克数
+        <text class="red_font3">{{kezhong}}</text>克</view>
+      <button class="now_buy" bindtap="nowBuy" disabled="{{mini>kezhong}}">立即买入</button>
+      <view class="hint" hidden="{{mini<=kezhong}}">*此周期商品{{mini}}克起购，请满足条件后购买</view>
+    </view>
+  </view>
+</view>
+<view class="rule_list">
+  <view class="list_btn">
+    <text wx:for="{{btns}}" wx:for-index="index" wx:for-item="list" wx:key="index" class="{{index == tub?'start_style':''}}" bindtap="btns" data-index="{{index}}">{{list}}</text>
+  </view>
+  <view class="list_one">
+    <view class="list_item" hidden="{{tub==1}}">
+      <import src="../../wxParse/wxParse.wxml" />
+      <template is="wxParse" data="{{wxParseData:newDetailsNodes.nodes}}" />
+    </view>
+  </view>
+  <view class="list_two" hidden="{{tub==0}}">
+     <import src="../../wxParse/wxParse.wxml" />
+      <template is="wxParse" data="{{wxParseData:newDetailsNodes2.nodes}}" />
+  </view>
+</view>

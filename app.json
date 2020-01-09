@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/kind/kind",
+    "pages/goods/goods",
+    "pages/goldPrice/goldPrice",
+    "pages/my/my",
+    "pages/login/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "金宝缘",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#333333",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/public/home1.png",
+        "selectedIconPath": "images/public/home1_x.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/kind/kind",
+        "iconPath": "images/public/shop1.png",
+        "selectedIconPath": "images/public/shop1_x.png",
+        "text": "商城"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "images/public/my1.png",
+        "selectedIconPath": "images/public/my1_x.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

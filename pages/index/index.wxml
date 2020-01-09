@@ -1,0 +1,66 @@
+<!--index.wxml-->
+  <view class="topHeader">
+    <view class="price_left">
+      <text class="gold_title">基础金价
+      </text>
+      <view class="price_box" bind:showTab="showTab">
+        {{price}}
+        <text class="unit">元/克</text>
+      </view>
+    </view>
+    <view class="price_right" bindtap="goPrice">
+      品牌金价对比
+      <image src="../../images/icon/icon.png"></image>
+    </view>
+  </view>
+<view class="container">
+  <swiper indicator-dots="{{true}}" autoplay="{{true}}">
+    <block wx:for="{{imgUrls}}" wx:for-index="index" wx:for-item="img" wx:key="index">
+      <swiper-item>
+        <image src="{{img.thumb}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="centerdiv">
+    <view class="center_box">
+      <view class="classify">
+        <image src="../../images/icon/index_icon.png"></image>
+        <text>正品保障</text>
+      </view>
+      <view class="classify">
+        <image src="../../images/icon/index_icon.png"></image>
+        <text>低价直供</text>
+      </view>
+      <view class="classify">
+        <image src="../../images/icon/index_icon.png"></image>
+        <text>售后无忧</text>
+      </view>
+      <view class="classify">
+        <image src="../../images/icon/index_icon.png"></image>
+        <text>帮助中心</text>
+      </view>
+    </view>
+  </view>
+  <view class="center_tab">
+    <view class="tab_box">
+      <image src="../../images/index/yaoqing.png"></image>
+      <text>邀请有礼</text>
+    </view>
+    <view class="tab_box">
+      <image src="../../images/index/renwu.png"></image>
+      <text>新手任务</text>
+    </view>
+    <view class="tab_box">
+      <image src="../../images/index/baozhang.png"></image>
+      <text>平台保障</text>
+    </view>
+    <view class="tab_box tab_box2">
+      <image src="../../images/index/bangzhu.png"></image>
+      <text>帮助中心</text>
+    </view>
+  </view>
+  <GoldPrice></GoldPrice>
+  <HotCake></HotCake>
+  <Footer></Footer>
+  <Loading wx:if="{{Loading}}"></Loading>
+</view>
